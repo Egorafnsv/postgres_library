@@ -1,3 +1,5 @@
+import sys
+
 import psycopg2
 import hashlib
 import tkinter.messagebox as box
@@ -22,6 +24,7 @@ class Connection:
                                           database="libraryDB")
         except psycopg2.OperationalError:
             box.showerror("Ошибка", "Проблемы с подключением к базе данных")
+            sys.exit(1)
 
         self.enter_window.title('Library')
         self.enter_window.iconbitmap('book_education_icon_217331.ico')
