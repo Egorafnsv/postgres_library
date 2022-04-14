@@ -70,4 +70,4 @@ class Connection:
         except TypeError:
             box.showerror("Ошибка в логине", "Такой пользователь отсутствует")
         except psycopg2.InternalError:
-            box.showerror("Ошибка", "Какая-то ошибка, обратитесь к Егору")
+            box.showerror("Ошибка", "Какая-то ошибка")
